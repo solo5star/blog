@@ -271,10 +271,6 @@ article {
     margin-left: var(--spacing-0);
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
   }
-  ul,
-  ol {
-    list-style-position: inside;
-  }
 
   h1 {
     font-size: var(--fontSize-5);

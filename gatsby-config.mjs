@@ -71,9 +71,6 @@ export default {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-helmet',
-    },
-    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.md', '.mdx'],

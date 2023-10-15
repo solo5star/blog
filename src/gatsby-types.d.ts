@@ -2551,6 +2551,7 @@ type SitePluginSortInput = {
 type SiteSiteMetadata = {
   readonly author: Maybe<Author>;
   readonly description: Maybe<Scalars['String']>;
+  readonly googleAnalytics: Maybe<SiteSiteMetadataGoogleAnalytics>;
   readonly links: Maybe<Scalars['JSON']>;
   readonly manifest: Maybe<SiteSiteMetadataManifest>;
   readonly siteUrl: Maybe<Scalars['String']>;
@@ -2560,6 +2561,7 @@ type SiteSiteMetadata = {
 type SiteSiteMetadataFieldSelector = {
   readonly author: InputMaybe<AuthorFieldSelector>;
   readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly googleAnalytics: InputMaybe<SiteSiteMetadataGoogleAnalyticsFieldSelector>;
   readonly links: InputMaybe<FieldSelectorEnum>;
   readonly manifest: InputMaybe<SiteSiteMetadataManifestFieldSelector>;
   readonly siteUrl: InputMaybe<FieldSelectorEnum>;
@@ -2569,10 +2571,27 @@ type SiteSiteMetadataFieldSelector = {
 type SiteSiteMetadataFilterInput = {
   readonly author: InputMaybe<AuthorFilterInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly googleAnalytics: InputMaybe<SiteSiteMetadataGoogleAnalyticsFilterInput>;
   readonly links: InputMaybe<JSONQueryOperatorInput>;
   readonly manifest: InputMaybe<SiteSiteMetadataManifestFilterInput>;
   readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataGoogleAnalytics = {
+  readonly trackingIds: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+};
+
+type SiteSiteMetadataGoogleAnalyticsFieldSelector = {
+  readonly trackingIds: InputMaybe<FieldSelectorEnum>;
+};
+
+type SiteSiteMetadataGoogleAnalyticsFilterInput = {
+  readonly trackingIds: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataGoogleAnalyticsSortInput = {
+  readonly trackingIds: InputMaybe<SortOrderEnum>;
 };
 
 type SiteSiteMetadataManifest = {
@@ -2614,6 +2633,7 @@ type SiteSiteMetadataManifestSortInput = {
 type SiteSiteMetadataSortInput = {
   readonly author: InputMaybe<AuthorSortInput>;
   readonly description: InputMaybe<SortOrderEnum>;
+  readonly googleAnalytics: InputMaybe<SiteSiteMetadataGoogleAnalyticsSortInput>;
   readonly links: InputMaybe<SortOrderEnum>;
   readonly manifest: InputMaybe<SiteSiteMetadataManifestSortInput>;
   readonly siteUrl: InputMaybe<SortOrderEnum>;

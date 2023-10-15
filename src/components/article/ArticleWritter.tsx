@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import useBio from '../../hooks/useBio';
 
@@ -20,16 +21,7 @@ const ArticleWritter = () => {
         />
       </Avatar>
       {author?.name && (
-        <Title>
-          Written by{' '}
-          {author.about ? (
-            <a target="_blank" href={author.about} rel="noreferrer">
-              {author.name}
-            </a>
-          ) : (
-            author.name
-          )}
-        </Title>
+        <Title>Written by {author.about ? <Link to={author.about}>{author.name}</Link> : author.name}</Title>
       )}
     </Root>
   );

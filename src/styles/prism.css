@@ -1,0 +1,344 @@
+/**
+ * Prism material oceanic
+ *
+ * https://github.com/PrismJS/prism-themes
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	color: #c3cee3;
+	background: #263238;
+	font-family: 'Source Code Pro Variable', monospace;
+	/* font-size: 1em; */
+	/* line-height: 1.5em; */
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre > code[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+pre > code[class*="language-"] ::-moz-selection,
+pre[class*="language-"] ::-moz-selection {
+	background: #363636;
+}
+
+pre > code[class*="language-"]::selection,
+pre[class*="language-"]::selection,
+pre > code[class*="language-"] ::selection,
+pre[class*="language-"] ::selection {
+	background: #363636;
+}
+
+:not(pre) > code[class*="language-"] {
+	white-space: normal;
+	border-radius: 0.2em;
+	padding: 0.1em;
+}
+
+pre[class*="language-"] {
+	overflow: auto;
+	position: relative;
+	margin: 0.5em 0;
+	padding: 1em;
+}
+
+.language-css > code,
+.language-sass > code,
+.language-scss > code {
+	color: #fd9170;
+}
+
+[class*="language-"] .namespace {
+	opacity: 0.7;
+}
+
+.token.atrule {
+	color: #c792ea;
+}
+
+.token.attr-name {
+	color: #ffcb6b;
+}
+
+.token.attr-value {
+	color: #c3e88d;
+}
+
+.token.attribute {
+	color: #c3e88d;
+}
+
+.token.boolean {
+	color: #c792ea;
+}
+
+.token.builtin {
+	color: #ffcb6b;
+}
+
+.token.cdata {
+	color: #80cbc4;
+}
+
+.token.char {
+	color: #80cbc4;
+}
+
+.token.class {
+	color: #ffcb6b;
+}
+
+.token.class-name {
+	color: #f2ff00;
+}
+
+.token.color {
+	color: #f2ff00;
+}
+
+.token.comment {
+	color: #546e7a;
+}
+
+.token.constant {
+	color: #c792ea;
+}
+
+.token.deleted {
+	color: #f07178;
+}
+
+.token.doctype {
+	color: #546e7a;
+}
+
+.token.entity {
+	color: #f07178;
+}
+
+.token.function {
+	color: #c792ea;
+}
+
+.token.hexcode {
+	color: #f2ff00;
+}
+
+.token.id {
+	color: #c792ea;
+	font-weight: bold;
+}
+
+.token.important {
+	color: #c792ea;
+	font-weight: bold;
+}
+
+.token.inserted {
+	color: #80cbc4;
+}
+
+.token.keyword {
+	color: #c792ea;
+	font-style: italic;
+}
+
+.token.number {
+	color: #fd9170;
+}
+
+.token.operator {
+	color: #89ddff;
+}
+
+.token.prolog {
+	color: #546e7a;
+}
+
+.token.property {
+	color: #80cbc4;
+}
+
+.token.pseudo-class {
+	color: #c3e88d;
+}
+
+.token.pseudo-element {
+	color: #c3e88d;
+}
+
+.token.punctuation {
+	color: #89ddff;
+}
+
+.token.regex {
+	color: #f2ff00;
+}
+
+.token.selector {
+	color: #f07178;
+}
+
+.token.string {
+	color: #c3e88d;
+}
+
+.token.symbol {
+	color: #c792ea;
+}
+
+.token.tag {
+	color: #f07178;
+}
+
+.token.unit {
+	color: #f07178;
+}
+
+.token.url {
+	color: #fd9170;
+}
+
+.token.variable {
+	color: #f07178;
+}
+
+/**
+ * diff highlight
+ *
+ * We prefix all selectors with pre:not(.language-diff), to ensure we leave 
+ * git diffs intact. 
+ * But all other diffs (e.g., JavaScript, C++, etc...), will have 
+ * the changes applied.
+ */
+
+/* Hide the diff tokens "column" of diff files code blocks (the first 
+   character of each line). */
+pre:not(.language-diff) .token.prefix.inserted,
+pre:not(.language-diff) .token.prefix.deleted,
+pre:not(.language-diff) .token.prefix.unchanged {
+	user-select: none;
+	color: transparent;
+}
+
+pre > code .token.prefix.inserted,
+pre > code .token.prefix.deleted,
+pre > code .token.prefix.unchanged {
+	position: absolute;
+}
+
+pre > code .token.inserted,
+pre > code .token.deleted {
+	font-style: unset;
+}
+
+/* On each line that would have had a "+" or "-" token, add that same token
+as an absolutely positioned character to the left of the code block. */
+pre:not(.language-diff) .token.prefix.inserted::after {
+	content: "+";
+	user-select: none;
+
+	position: absolute;
+
+	margin-left: -1rem;
+
+	color: green;
+}
+
+pre:not(.language-diff) .token.prefix.deleted::after {
+	content: "-";
+	user-select: none;
+
+	position: absolute;
+
+	margin-left: -1rem;
+
+	color: red;
+}
+
+/** Adjust the margins and paddings of diff codeblocks to ensure the
+highlighted row is not blocked by the artificial token created above. */
+pre:not(.language-diff).diff-highlight > code .token.inserted:not(.prefix),
+pre:not(.language-diff) > code.diff-highlight .token.inserted:not(.prefix) {
+	margin-right: -1rem;
+	margin-left: -1rem;
+	padding-right: 1em;
+	padding-left: 1rem;
+}
+
+pre:not(.language-diff).diff-highlight > code .token.deleted:not(.prefix),
+pre:not(.language-diff) > code.diff-highlight .token.deleted:not(.prefix) {
+	margin-right: -1rem;
+	margin-left: -1rem;
+	padding-right: 1em;
+	padding-left: 1rem;
+}
+
+/**
+ * Line Highlight
+ */
+pre[data-line] {
+	position: relative;
+}
+
+.line-highlight {
+	pointer-events: none;
+
+	position: absolute;
+	right: 0;
+	left: 0;
+
+	margin-top: 1em; /* Same as .prism’s padding-top */
+	padding: inherit 0;
+
+	line-height: inherit;
+	white-space: pre;
+
+	/* background: hsla(24, 20%, 50%,.08); */
+	/* background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0)); */
+
+	background-color: rgba(0, 255, 128, .1);
+}
+
+@media print {
+	.line-highlight {
+		color-adjust: exact;
+		/*
+		* This will prevent browsers from replacing the background color with white.
+		* It's necessary because the element is layered on top of the displayed code.
+		*/
+		-webkit-print-color-adjust: exact;
+	}
+}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+	pointer-events: all;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+	cursor: pointer;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+	background-color: rgba(128, 128, 128, .2);
+}
+
+:not(pre) > code[class*=language-] {
+	background: rgba(175,184,193,.2);
+	color: var(--color-text);
+	font-weight: 500;
+}

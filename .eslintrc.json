@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:compat/recommended",
+    "plugin:mdx/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "compat",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "settings": {
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "mdx/code-blocks": true,
+    // optional, if you want to disable language mapper, set it to `false`
+    // if you want to override the default language mapper inside, you can provide your own
+    "mdx/language-mapper": {}
+  },
+  "rules": {
+    "no-underscore-dangle": "off",
+    "no-undef": "off",
+    "no-use-before-define": "off",
+    "prettier/prettier": "warn",
+    "compat/compat": "warn",
+    "import/first": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        "fixStyle": "separate-type-imports"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-danger": "off",
+    "react/display-name": "off",
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": "off",
+    "react/no-unknown-property": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": "arrow-function"
+      }
+    ]
+  }
+}

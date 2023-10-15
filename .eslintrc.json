@@ -42,6 +42,7 @@
     "no-underscore-dangle": "off",
     "no-undef": "off",
     "no-use-before-define": "off",
+    "no-shadow": "off",
     "prettier/prettier": "warn",
     "compat/compat": "warn",
     "import/first": "off",

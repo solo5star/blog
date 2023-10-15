@@ -7,7 +7,7 @@ import '../styles/prism.css';
 
 import Prism from 'prismjs';
 
-window.Prism = window.Prism || {};
+globalThis.Prism = globalThis.Prism || {};
 Prism.manual = true;
 
 import 'prismjs/plugins/diff-highlight/prism-diff-highlight';

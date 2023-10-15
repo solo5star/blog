@@ -89,12 +89,6 @@ export default {
             },
           },
           'gatsby-remark-images-zoom',
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
-            },
-          },
         ],
         mdxOptions: {
           remarkPlugins: [remarkGfm],

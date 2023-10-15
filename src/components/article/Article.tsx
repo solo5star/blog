@@ -111,6 +111,10 @@ const BodyContent = styled.div`
     margin-bottom: var(--spacing-1);
     margin-left: auto;
   }
+
+  & iframe {
+    max-width: 100%;
+  }
 `;
 
 const BodyAside = styled.aside`

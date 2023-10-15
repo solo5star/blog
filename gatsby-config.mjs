@@ -96,6 +96,12 @@ export default {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: blogConfig.googleAnalytics.trackingIds,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-feed`,
     //   options: {

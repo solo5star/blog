@@ -241,7 +241,6 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
-  word-break: break-all;
 }
 
 a:hover,

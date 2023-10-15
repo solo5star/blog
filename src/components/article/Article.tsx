@@ -102,6 +102,10 @@ const Body = styled.section`
 `;
 
 const BodyContent = styled.div`
+  & a {
+    word-break: break-all;
+  }
+
   & img,
   & video {
     display: block;

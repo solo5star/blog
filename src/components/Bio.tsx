@@ -33,13 +33,15 @@ const Bio = () => {
           </Title>
           {author.summary && <Summary>{author.summary}</Summary>}
           {links && (
-            <Links>
+            <LinkList>
               {Object.entries(links).map(([label, link]) => (
-                <Link key={label} target="_blank" href={link as string}>
-                  {label}
-                </Link>
+                <LinkListItem key={label}>
+                  <a target="_blank" href={link as string} rel="noreferrer">
+                    {label}
+                  </a>
+                </LinkListItem>
               ))}
-            </Links>
+            </LinkList>
           )}
         </div>
       )}
@@ -79,16 +81,17 @@ const Summary = styled.p`
   font-size: var(--fontSize-1);
 `;
 
-const Links = styled.div`
+const LinkList = styled.ul`
+  margin: 0;
   margin-top: var(--spacing-2);
 `;
 
-const Link = styled.a`
+const LinkListItem = styled.li`
   display: inline;
+  margin-right: var(--spacing-4);
   font-size: var(--fontSize-0);
-  text-decoration: none;
 
-  &:not(:first-child) {
-    margin-left: var(--spacing-4);
+  & a {
+    text-decoration: none;
   }
 `;

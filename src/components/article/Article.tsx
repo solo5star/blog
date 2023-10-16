@@ -73,10 +73,7 @@ const Categories = styled.ul`
 
   & > li {
     display: inline-block;
-  }
-
-  & > li:not(:first-child) {
-    margin-left: var(--spacing-3);
+    margin-right: var(--spacing-3);
   }
 `;
 

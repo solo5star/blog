@@ -46,6 +46,10 @@ const GlobalWrapper = styled.div`
 
 const GlobalHeader = styled.header`
   margin-bottom: var(--spacing-12);
+
+  @media (max-width: 42rem) {
+    margin-bottom: var(--spacing-6);
+  }
 `;
 
 const Copyright = styled.span`

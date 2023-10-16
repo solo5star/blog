@@ -53,10 +53,15 @@ export default Bio;
 
 const Root = styled.div`
   display: flex;
+  gap: var(--spacing-4);
   margin-bottom: var(--spacing-16);
 
   & p {
     margin-bottom: var(--spacing-0);
+  }
+
+  @media (max-width: 42rem) {
+    margin-bottom: var(--spacing-8);
   }
 `;
 
@@ -66,7 +71,6 @@ const Avatar = styled.div`
 
   width: 80px;
   height: 80px;
-  margin-right: var(--spacing-4);
   margin-bottom: var(--spacing-0);
 
   border-radius: 100%;
@@ -87,7 +91,7 @@ const LinkList = styled.ul`
 `;
 
 const LinkListItem = styled.li`
-  display: inline;
+  display: inline-block;
   margin-right: var(--spacing-4);
   font-size: var(--fontSize-0);
 

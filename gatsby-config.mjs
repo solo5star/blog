@@ -18,6 +18,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default {
   siteMetadata: blogConfig,
   graphqlTypegen: true,
+  jsxRuntime: 'automatic',
   plugins: [
     {
       resolve: 'gatsby-plugin-image',
